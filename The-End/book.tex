@@ -1,5 +1,5 @@
 %%% DOCUMENTCLASS 
-%%%-------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \documentclass[
 letter, % Stock and paper size.
@@ -13,10 +13,9 @@ openright, % Each chapter will start on a recto page.
 ]{memoir}
 
 %%% PACKAGES 
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \usepackage[utf8]{inputenc} % If utf8 encoding
-% \usepackage[lantin1]{inputenc} % If not utf8 encoding, then this is probably the way to go
 \usepackage[T1]{fontenc}    %
 \usepackage[english]{babel} % English please
 \usepackage[final]{microtype} % Less badboxes
@@ -29,14 +28,14 @@ openright, % Each chapter will start on a recto page.
 \usepackage{graphicx} % Include figures
 
 %%% PAGE LAYOUT 
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \setlrmarginsandblock{0.15\paperwidth}{*}{1} % Left and right margin
 \setulmarginsandblock{0.2\paperwidth}{*}{1}  % Upper and lower margin
 \checkandfixthelayout
 
 %%% SECTIONAL DIVISIONS
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \maxsecnumdepth{subsection} % Subsections (and higher) are numbered
 \setsecnumdepth{subsection}
@@ -68,7 +67,7 @@ openright, % Each chapter will start on a recto page.
 \setparaindent{0pt}\setafterparaskip{0pt}
 
 %%% FLOATS AND CAPTIONS
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \makeatletter                  % You do not need to write [htpb] all the time
 \renewcommand\fps@figure{htbp} %
@@ -83,14 +82,17 @@ openright, % Each chapter will start on a recto page.
 \captionwidth{1\textwidth} %
 
 %%% ABSTRACT
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
-\renewcommand{\abstractnamefont}{\normalfont\small\bfseries} % Font of abstract title
-\setlength{\absleftindent}{0.1\textwidth} % Width of abstract
+% Font of abstract title
+\renewcommand{\abstractnamefont}{\normalfont\small\bfseries}
+
+% Width of abstract
+\setlength{\absleftindent}{0.1\textwidth} 
 \setlength{\absrightindent}{\absleftindent}
 
 %%% HEADER AND FOOTER 
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \makepagestyle{standard} % Make standard pagestyle
 
@@ -130,33 +132,36 @@ openright, % Each chapter will start on a recto page.
 \aliaspagestyle{chapter}{chap} %
 
 %%% NEW COMMANDS
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \newcommand{\p}{\partial} %Partial
 % Or what ever you want
 
 %%% TABLE OF CONTENTS
-%%%------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
-\maxtocdepth{subsection} % Only parts, chapters and sections in the table of contents
+% Only parts, chapters and sections in the table of contents
+\maxtocdepth{subsection} 
 \settocdepth{subsection}
 
-\AtEndDocument{\addtocontents{toc}{\par}} % Add a \par to the end of the TOC
+% Add a \par to the end of the TOC
+\AtEndDocument{\addtocontents{toc}{\par}} 
 
 %%% INTERNAL HYPERLINKS
-%%%-------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \usepackage{hyperref}   % Internal hyperlinks
 \hypersetup{
 pdfborder={0 0 0},      % No borders around internal hyperlinks
-pdfauthor={Cem Karan}   % This one uses commas as separators, e.g. "Author A, Author B"
-                        % and there can be an arbitrary number of authors.
+pdfauthor={Cem Karan}   % This one uses commas as separators, e.g. 
+                        % "Author A, Author B", and there can be an arbitrary 
+                        % number of authors.
 }
 \usepackage{memhfixc}   %
 
 %%% THE DOCUMENT
 %%% Where all the important stuff is included!
-%%%-------------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 \author{Cem Karan \and Author B \and Author C}
 \title{The End}
@@ -195,7 +200,7 @@ pdfauthor={Cem Karan}   % This one uses commas as separators, e.g. "Author A, Au
 \backmatter
 
 %%% BIBLIOGRAPHY
-%%% -------------------------------------------------------------
+%%% ----------------------------------------------------------------------------
 
 % \bibliographystyle{utphysics}
 % \bibliography{ref}
