@@ -5,3 +5,7 @@ A book about life, death, taxes, and bureaucracy
 of this license can be found in the file LICENSE.txt accompanying this file.
 
 For the time being, we're licensing this work under the CC BY-NC-ND 4.0 license.  This isn't to keep everyone out, it's to force everyone to contribute here so we can read your stories too! ;)
+
+To build the book, you will need to have LaTeX installed.  If you're lucky and your operating system has a package manager that supports LaTeX, then use the package manager; it will be the easiest way to go.  Alternatively, you can go to the <a href="http://tug.org/">TeX Users Group (TUG)</a> website and download and install the software most appropriate for your machine.  
+
+Once you have LaTeX installed, change directories into the `The-End` directory, and run `latexmk --pdf book.tex`.  That should create a new PDF file titled `book.pdf`.  Read and enjoy! 
